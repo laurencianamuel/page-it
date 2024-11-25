@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PageIT</title>
+    <link rel="icon" href="images/pageit.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css" />
+
+   <style>
+
+img {
+  max-width: 100%;
+  height: auto;
+  transition: all 0.3s ease}
+  
+
+
+   </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+   
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+
+
+  </head>
+  <body >
+    <header >
+      <nav class="navbar">
+        <div class="logo">
+          <div class="img">
+            <img src="images/pageit.png" alt="" />
+          </div>
+          <div class="logo-header">
+            <h4><a href="index.html">PageIT</a></h4>
+            
+          </div>
+        </div>
+        <ul class="nav-list">
+          <div class="logo">
+            <div class="title">
+              <div class="img">
+                <img src="images/pageit.png" alt="" />
+              </div>
+              <div class="logo-header">
+                <h4><a href="index.html">PageIT</a></h4>
+                
+              </div>
+            </div>
+            <button class="close"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Pages/books.html">Books</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+          <li><a href="pages/cart.html">Cart</a></li>
+          <li><a href="about.html">About Us</a></li>
+
+
+      
+          
+          
+        </ul>
+        <div class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </nav>
+    </header>
+
+        
+
+    <style>
+      .book-container {
+        overflow: hidden;
+        position: relative;
+      }
+      .books {
+        display: flex;
+        transition: transform 0.5s ease;
+      }
+      .book {
+        flex: 0 0 auto;
+        margin-right: 10px;
+      }
+      .book img {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+    </head>
+    <body>
+    
+    <section class="suggestion">
+      <div class="container">
+        <div class="recommend">
+          <h4>Recommended For You</h4>
+          <p>Discover books that match your interests and preferences.
+             Handpicked just for you, these titles promise to engage and inspire.</p>
+          <div class="book-container" id="recommended">
+            <div class="books">
+              <div class="book"><a href="Pages/booksdetaileinstein.html"><img src="images/einstein.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-martians.html"><img src="images/martians.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-the24thhour.html"><img src="images/the24thhour.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-thehunger.html"><img src="images/hunger.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetaileinstein.html"><img src="images/einstein.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-martians.html"><img src="images/martians.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-the24thhour.html"><img src="images/the24thhour.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-thehunger.html"><img src="images/hunger.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetaileinstein.html"><img src="images/einstein.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-martians.html"><img src="images/martians.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-the24thhour.html"><img src="images/the24thhour.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-thehunger.html"><img src="images/hunger.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetaileinstein.html"><img src="images/einstein.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-martians.html"><img src="images/martians.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-the24thhour.html"><img src="images/the24thhour.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-thehunger.html"><img src="images/hunger.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetaileinstein.html"><img src="images/einstein.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-martians.html"><img src="images/martians.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-the24thhour.html"><img src="images/the24thhour.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-thehunger.html"><img src="images/hunger.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetaileinstein.html"><img src="images/einstein.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-martians.html"><img src="images/martians.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-the24thhour.html"><img src="images/the24thhour.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-thehunger.html"><img src="images/hunger.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetaileinstein.html"><img src="images/einstein.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-martians.html"><img src="images/martians.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-the24thhour.html"><img src="images/the24thhour.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-thehunger.html"><img src="images/hunger.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetaileinstein.html"><img src="images/einstein.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-martians.html"><img src="images/martians.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-the24thhour.html"><img src="images/the24thhour.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-thehunger.html"><img src="images/hunger.jpg" alt=""></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="popular">
+          <h4>Popular in 2024</h4>
+          <p>Explore the most talked-about books of 2024. From groundbreaking
+             novels to insightful non-fiction, these are the titles that readers can't get enough of this year.</p>
+          <div class="book-container" id="popular">
+            <div class="books">
+              <div class="book"><a href="Pages/booksdetail-deadstar.html"><img src="images/deadstar.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-thetalesofthethames.html"><img src="images/tales.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-asweetstingofsalt.html"><img src="images/romance1.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-theatlassix.html"><img src="images/atlas.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-deadstar.html"><img src="images/deadstar.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-thetalesofthethames.html"><img src="images/tales.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-asweetstingofsalt.html"><img src="images/romance1.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-theatlassix.html"><img src="images/atlas.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-deadstar.html"><img src="images/deadstar.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-thetalesofthethames.html"><img src="images/tales.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-asweetstingofsalt.html"><img src="images/romance1.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-theatlassix.html"><img src="images/atlas.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-deadstar.html"><img src="images/deadstar.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-thetalesofthethames.html"><img src="images/tales.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-asweetstingofsalt.html"><img src="images/romance1.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-theatlassix.html"><img src="images/atlas.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-deadstar.html"><img src="images/deadstar.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-thetalesofthethames.html"><img src="images/tales.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-asweetstingofsalt.html"><img src="images/romance1.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-theatlassix.html"><img src="images/atlas.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-deadstar.html"><img src="images/deadstar.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-thetalesofthethames.html"><img src="images/tales.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-asweetstingofsalt.html"><img src="images/romance1.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-theatlassix.html"><img src="images/atlas.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-deadstar.html"><img src="images/deadstar.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-thetalesofthethames.html"><img src="images/tales.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-asweetstingofsalt.html"><img src="images/romance1.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-theatlassix.html"><img src="images/atlas.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-deadstar.html"><img src="images/deadstar.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-thetalesofthethames.html"><img src="images/tales.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-asweetstingofsalt.html"><img src="images/romance1.jpg" alt=""></a></div>
+              <div class="book"><a href="Pages/booksdetail-theatlassix.html"><img src="images/atlas.jpg" alt=""></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <script>
+      // Auto slider function
+      function autoSlider(containerId) {
+        const container = document.getElementById(containerId);
+        const books = container.querySelector('.books');
+        const bookWidth = container.querySelector('.book').offsetWidth;
+        const originalSlides = container.querySelectorAll('.book');
+        const originalSlidesCount = originalSlides.length;
+        let currentIndex = 0;
+    
+        // Duplicate the slides
+        const clonedSlides = Array.from(originalSlides).map((slide) => slide.cloneNode(true));
+        books.append(...clonedSlides);
+    
+        function nextSlide() {
+          currentIndex++;
+          if (currentIndex >= originalSlidesCount) {
+            currentIndex = 0; // Reset index to the first original slide
+            books.style.transition = 'none'; // Disable transition for instant jump
+            books.style.transform = `translateX(0)`;
+            setTimeout(() => {
+              books.style.transition = ''; // Re-enable transition after jump
+            }, 50); // Small delay to ensure transition re-enables properly
+          }
+          updateSlider();
+        }
+    
+        function updateSlider() {
+          books.style.transform = `translateX(-${currentIndex * bookWidth}px)`;
+        }
+    
+        setInterval(nextSlide, 1500); // Change slide every 1.5 seconds
+      }
+    
+      // Initialize sliders
+      autoSlider('recommended');
+      autoSlider('popular');
+    </script>
+    
+    
+    
+    
+
+   
+
+ 
+
+    <section class="book-sale">
+      <div class="heading">
+        <h4>Books On Sale</h4>
+        <div class="arrowbtn">
+          <i id="left" class="fa-solid fa-angle-left"></i>
+          <i id="right" class="fa-solid fa-angle-right"></i>
+        </div>
+      </div>
+      <div class="book-container">
+        <div class="wrapper">
+          <ul class="carousel">
+            <li class="card">
+              <div class="img">
+                <a href="./Pages/booksdetaileinstein.html"><img src="./images/einstein.jpg" alt="" /></a>
+              </div>
+              <h5>The Universe and...</h5>
+              <div class="genre">
+                <span>Non-Fiction</span>
+              </div>
+              <div class="footer">
+                <span class="star"><i class="fa fa-star"></i> 4.8</span>
+                <div class="price">
+                  <span>₱ 426.2</span>
+                  <span><strike>₱ 596.2</strike></span>
+                </div>
+              </div>
+            </li>
+            <li class="card" >
+              <div class="img">
+                <a href="./Pages/booksdetail-martians.html"><img src="./images/martians.jpg" alt="" /></a>
+              </div>
+              <h5>Martians of Science</h5>
+              <div class="genre">
+                <span>Non-Fiction</span>
+              </div>
+              <div class="footer">
+                <span class="star"><i class="fa fa-star"></i> 4.7</span>
+                <div class="price">
+                  <span>₱ 321.2</span>
+                  <span><strike>₱ 458.2</strike></span>
+                </div>
+              </div>
+            </li>
+            <li class="card">
+              <div class="img">
+                <a href="./Pages/booksdetail-deadstar.html"><img src="./images/deadstar.jpg" alt="" /></a>
+              </div>
+              <h5>Dead Star</h5>
+              <div class="genre">
+                <span>Science Fiction</span>
+              </div>
+              <div class="footer">
+                <span class="star"><i class="fa fa-star"></i> 4.6</span>
+                <div class="price">
+                  <span>₱ 426.2</span>
+                  <span><strike>₱ 558.6</strike></span>
+                </div>
+              </div>
+            </li>
+            <li class="card">
+              <div class="img">
+                <a href="./Pages/booksdetail-thehunger.html"><img src="./images/hunger.jpg" alt="" /></a>
+              </div>
+              <h5>The Hunger Games</h5>
+              <div class="genre">
+                <span>Mystery</span>
+              </div>
+              <div class="footer">
+                <span class="star"><i class="fa fa-star"></i> 4.6</span>
+                <div class="price">
+                  <span>₱ 415.5</span>
+                  <span><strike>₱ 515.5</strike></span>
+                </div>
+              </div>
+            </li>
+            <li class="card">
+              <div class="img">
+                <a href="./Pages/booksdetail-thetalesofthethames.html"><img src="./images/tales.jpg" alt="" /></a>
+              </div>
+              <h5>The Tales of...</h5>
+              <div class="genre">
+                <span>Adventure</span>
+              </div>
+              <div class="footer">
+                <span class="star"><i class="fa fa-star"></i> 4.7</span>
+                <div class="price">
+                  <span>₱ 465.2</span>
+                  <span><strike>₱ 625.2</strike></span>
+                </div>
+              </div>
+            </li>
+            <li class="card">
+              <div class="img">
+                <a href="./Pages/booksdetail-realmofruins.html"><img src="./images/realm.jpg" alt="" /></a>
+              </div>
+              <h5>Realm of Ruins</h5>
+              <div class="genre">
+                <span>Fantasy</span>
+              </div>
+              <div class="footer">
+                <span class="star"><i class="fa fa-star"></i> 4.8</span>
+                <div class="price">
+                  <span>₱ 476.6</span>
+                  <span><strike>₱ 746.6</strike></span>
+                </div>
+              </div>
+            </li>
+            <li class="card">
+              <div class="img">
+                <a href="./Pages/booksdetail-the24thhour.html"><img src="./images/the24thhour.jpg" alt="" /></a>
+              </div>
+              <h5>Game of...</h5>
+              <div class="genre">
+                <span>Mystery</span>
+              </div>
+              <div class="footer">
+                <span class="star"><i class="fa fa-star"></i> 4.7</span>
+                <div class="price">
+                  <span>₱ 450.5</span>
+                  <span><strike>₱ 650.5</strike></span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature">
+      <div class="main">
+        <div class="content">
+          <h4>Featured Books</h4>
+          <p>
+            Discover our selection of top-rated books this month. <br />
+            From thrilling mysteries to heartwarming romances, there's something for everyone. Dive into a new adventure today!.
+          </p>
+          <div class="featured-book-card">
+            <div class="img">
+              <a href="pages/booksdetaileinstein.html"><img src="images/einstein.jpg" alt="" /></a>
+            </div>
+            <div class="card-description">
+              <div class="card-header">
+              <div class="icon">
+                  <i class="fa-regular fa-bookmark"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+                <div class="title">
+                  <h5>The Universe and Dr.Einstein</h5>
+                  <small>Non-Fiction</small>
+                </div>
+              </div>
+              <div class="card-body">
+                <h6>Synopsis</h6>
+                <p>
+                  The Universe and Dr. Einstein" explores the profound impact of Albert Einstein's theories on our understanding of the cosmos. 
+    This captivating book delves into the revolutionary ideas of relativity and quantum mechanics, and how they reshaped modern physics. 
+    Through accessible explanations and insightful anecdotes, readers will gain a deeper appreciation for the genius of Einstein and 
+    the mysteries of the universe he helped unravel.
+                </p>
+                <div class="author-year">
+                  <div class="author">
+                    <small>Written by</small>
+                    <strong>Lincoln Barnett</strong>
+                  </div>
+                  <div class="year">
+                    <small>Year</small>
+                    <strong>1948</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="book-section">
+          <div class="container">
+            <div class="img">
+              <a href="pages/booksdetail-the24thhour.html"><img src="images/the24thhour.jpg" alt="" /></a>
+            </div>
+            <div class="img">
+              <a href="pages/booksdetail-thehunger.html"><img src="images/hunger.jpg" alt="" /></a>
+            </div>
+            <div class="img">
+              <a href="pages/booksdetail-martians.html"><img src="images/martians.jpg" alt="" /></a>
+            </div>
+            <div class="img">
+              <a href="pages/booksdetail-realmofruins.html"><img src="images/realm.jpg" alt="" /></a>
+            </div>
+            <div class="img">
+              <a href="pages/booksdetail-thetalesofthethames.html"><img src="images/tales.jpg" alt="" /></a>
+            </div>
+            <div class="img">
+              <a href="pages/booksdetail-theatlassix.html"><img src="images/atlas.jpg" alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="circle-1"></div>
+      <div class="circle-2"></div>
+    </section>
+
+
+
+
+  
+
+    <footer>
+      <div class="container">
+        <div class="logo-description">
+          <div class="logo">
+            <div class="img">
+              <img src="images/pageit.png" alt="" />
+            </div>
+            <div class="title">
+              <h4>PageIT</h4>
+            </div>
+          </div>
+          <div class="logo-body">
+            <p>
+              Welcome to PageIT, your ultimate destination for a diverse range of books. Whether you're looking for the latest bestsellers, timeless classics, 
+              or hidden gems, our collection is curated to meet the tastes of every reader. Explore our store and find your next great read today!
+            </p>
+          </div>
+          <div class="social-links">
+            <h4>Follow Us</h4>
+            <ul class="links">
+              <li>
+                <a href="https://www.facebook.com/laurencianamuel"><i class="fa-brands fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/asdfghjklhxm/"><i class="fa-brands fa-instagram"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      
+      
+        <div class="our-store list">
+          <h4>Our Store</h4>
+          <div class="map" style="margin-top: 1rem">
+            <iframe
+              src="images/baldomero.jpg"
+              height="70"
+              style="width: 100%; border: none; border-radius: 5px"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <ul>
+            <li>
+              <a href="https://www.google.com/maps/search/blk+1+lot+9+sunrise+compound+baldomero+st+valenzuela+city/@14.7126148,120.9515176,14z/data=!3m1!4b1?entry=ttu"
+                ><i class="fa-solid fa-location-dot"></i>Blk 1 lot 9 Sunrise Compound Baldomero st. Malanday Valenzuela City</a
+              >
+            </li>
+            <li>
+              <a href=""><i class="fa-solid fa-phone"></i>+63 9005945827</a>
+            </li>
+            <li>
+              <a href=""
+                ><i class="fa-solid fa-envelope"></i>support@PageIT.id</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <button class="back-to-top"><i class="fa-solid fa-chevron-up"></i></button>
+    <script src="js/back-to-top.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/repeat-js.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script >// Auto-scrolling functionality
+      const bookContainers = document.querySelectorAll('.book-container');
+      
+      function startScrolling(container) {
+        const books = container.querySelector('.books');
+        const firstBook = books.firstElementChild.cloneNode(true);
+        const lastBook = books.lastElementChild.cloneNode(true);
+      
+        // Append cloned books for smooth looping
+        books.appendChild(firstBook);
+        books.insertBefore(lastBook, books.firstElementChild);
+      
+        // Set animation duration based on number of books
+        const bookCount = books.childElementCount;
+        const animationDuration = bookCount * 2 + 's'; // Adjust scroll speed as needed
+      
+        // Apply animation to books container
+        books.style.animation = `scroll $ {animationDuration} linear infinite`;
+      }
+      
+      bookContainers.forEach(container => {
+        startScrolling(container);
+      });
+      </script>
+
+    
+    
+  </body>
+  <br><br>
+</html>

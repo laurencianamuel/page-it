@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PageIT | Cart</title>
+    <link rel="icon" href="../images/pageit.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="book-filter.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="apple-touch-icon" sizes="57x57" href="../favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon sizes="144x144" href="../favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon sizes="152x152" href="../favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon sizes="180x180" href="../favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <style>
+      .quantity-button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        font-size: 1rem;
+        padding: 0.2rem 0.5rem;
+        transition: background-color 0.3s ease;
+      }
+
+      .quantity-button:hover {
+        background-color: #f0f0f0;
+      }
+
+      .quantity span {
+        margin: 0 0.5rem;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar-2">
+        <div class="logo">
+          <div class="img">
+            <a href="../index.html"><img src="../images/pageit.png" alt="" /></a>
+          </div>
+          <div class="title">
+            <h4>PageIT<i class="fa-solid fa-grid"></i></h4>
+          </div>
+        </div>
+     
+        <div class="nav-end">
+          <button class="cart">
+            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> </a>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <div class="breadcrumb-container">
+      <ul class="breadcrumb">
+        <li><a href="books.html" style="color: #ec9006">Books</a></li>
+        <li><a href="">Cart</a></li>
+      </ul>
+    </div>
+
+    <section class="cart-item page">
+      <h2>Book Cart</h2>
+      <div class="product-table">
+        <table cellspacing=0>
+          <tr class="heading">
+            <th>Book Image</th>
+            <th>Book Name</th>
+            <th>Unit Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>Delete</th>
+          </tr>
+          <!-- Cart items will be dynamically added here -->
+        </table>
+      </div>        
+    </section>
+
+    <button class="back-to-top"><i class="fa-solid fa-chevron-up"></i></button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../js/repeat-js.js"></script>
+    <script src="../js/back-to-top.js"></script>
+  
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const table = document.querySelector('.product-table table');
+    
+        cart.forEach(book => {
+          const row = document.createElement('tr');
+          row.className = 'data';
+          row.innerHTML = `
+            <td><img src="${book.image}" alt="${book.title}"></td>
+            <td>${book.title}</td>
+            <td>₱${book.price.toFixed(2)}</td>
+            <td class="quantity">
+              <button class="quantity-button" onclick="decrementQuantity(this, '${book.title}')">-</button>
+              <span>${book.quantity}</span>
+              <button class="quantity-button" onclick="incrementQuantity(this, '${book.title}')">+</button>
+            </td>
+            <td>₱${(book.price * book.quantity).toFixed(2)}</td>
+            <td><i class="fa-solid fa-trash" onclick="removeFromCart('${book.title}')"></i></td>
+          `;
+          table.appendChild(row);
+        });
+      });
+    
+      function removeFromCart(title) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let found = false; 
+    cart = cart.filter(book => {
+        if (!found && book.title === title) {
+            found = true; 
+            return false; 
+        }
+        return true; 
+    });
+    localStorage.setItem('cart', JSON.stringify(cart));
+    location.reload(); 
+}
+    
+      function incrementQuantity(button, title) {
+        const row = button.parentElement.parentElement;
+        const quantityElement = row.querySelector('span');
+        let quantity = parseInt(quantityElement.textContent);
+        quantity++;
+        quantityElement.textContent = quantity;
+        updateTotal(row, quantity);
+        updateLocalStorage(title, quantity);
+      }
+    
+      function decrementQuantity(button, title) {
+        const row = button.parentElement.parentElement;
+        const quantityElement = row.querySelector('span');
+        let quantity = parseInt(quantityElement.textContent);
+        if (quantity > 1) {
+          quantity--;
+          quantityElement.textContent = quantity;
+          updateTotal(row, quantity);
+          updateLocalStorage(title, quantity);
+        }
+      }
+    
+      function updateTotal(row, quantity) {
+        const price = parseFloat(row.querySelector('td:nth-child(3)').textContent.slice(1));
+        const total = price * quantity;
+        row.querySelector('td:nth-child(5)').textContent = `₱${total.toFixed(2)}`;
+      }
+    
+      function updateLocalStorage(title, quantity) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let book = cart.find(book => book.title === title);
+        if (book) {
+          book.quantity = quantity;
+        } else {
+          cart.push({ title: title, quantity: quantity });
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+      }
+    </script>
+    
+    <section class="cart-actions">
+      <button class="payment-button" onclick="window.location.href='payment.html'">Proceed to Payment</button>
+  </section>
+  
+  <style>
+      .cart-actions {
+          text-align: center;
+          margin-top: 1.5rem;
+      }
+      .payment-button {
+          display: inline-block;
+          padding: 0.75rem 1.5rem;
+          font-size: 1rem;
+          border: none;
+          background-color: #ff7300;
+          color: #fff;
+          cursor: pointer;
+          border-radius: 4px;
+          transition: background-color 0.3s ease;
+      }
+      .payment-button:hover {
+          background-color: #ff8c1a;
+      }
+  </style>
+  </body>
+</html>

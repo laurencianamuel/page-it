@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PageIT | Books</title>
+    <link rel="icon" href="../images/pageit.png" type="image/x-icon">
+
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="book-filter.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="apple-touch-icon" sizes="57x57" href="../favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+<link rel="manifest" href="../favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar-2">
+        <div class="logo">
+          <div class="img">
+            <a href="../index.html"><img src="../images/pageit.png" alt="" /></a>
+          </div>
+          <div class="title">
+            <h4>PageIT<i class="fa-solid fa-grid"></i></h4>
+            
+          </div>
+        </div>
+         <div class="search-box">
+          <div class="search-field">
+            <input
+              type="text" id="search-input"
+              placeholder="Search Book titles or Authors"
+            />
+            <button class="search-icon">
+              
+            </button>
+            <button id="search-button">Search</button>
+
+          </div>
+        </div>
+      
+
+        <div class="nav-end">
+          <button class="cart">
+            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> </a>
+          </button>
+          
+        </div>
+      </nav>
+    </header>
+
+    
+
+    <div class="breadcrumb-container">
+      <ul class="breadcrumb">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="">Books</a></li>
+      </ul>
+    </div>
+
+    <div class="container">
+           
+      
+
+    <section class="filter">
+      <div class="book-grid-container">
+        <div class="filter-option">
+          <div class="filter-group">
+            <h4>Filter Options</h4>
+          <div class="editor-pick select-box">
+            <div class="opt-title">
+              <h4>Editor Picks</h4>
+              <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="option">
+              <ul>
+                <li><a href="">Best Sales</a></li>
+                <li><a href="">Most Recommended</a></li>
+                <li><a href="">Newest Books</a></li>
+                <li><a href="">Featured</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="select-date dropdown">
+            <div class="opt-title">
+              <h4>Select Date</h4>
+              <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="option">
+              <input type="date" name="" id="" />
+            </div>
+          </div>
+          <div class="genre-category select-box">
+            <div class="opt-title">
+              <h4>Shop By Category</h4>
+              <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="option">
+              <div class="category">
+                <input type="checkbox" />
+                <small>Action</small>
+              </div>
+              <div class="category">
+                <input type="checkbox" />
+                <small>Fantasy</small>
+              </div>
+              <div class="category">
+                <input type="checkbox" />
+                <small>Adventure</small>
+              </div>
+              <div class="category">
+                <input type="checkbox" />
+                <small>History</small>
+              </div>
+              <div class="category">
+                <input type="checkbox" />
+                <small>Animation</small>
+              </div>
+              <div class="category">
+                <input type="checkbox" />
+                <small>Horror</small>
+              </div>
+              <div class="category">
+                <input type="checkbox" />
+                <small>Biography</small>
+              </div>
+              <div class="category">
+                <input type="checkbox" />
+                <small>Mystery</small>
+              </div>
+              <div class="category">
+                <input type="checkbox" />
+                <small>Comedy</small>
+              </div>
+              <div class="category">
+                <input type="checkbox" />
+                <small>Romance</small>
+              </div>
+              <div class="category">
+                <input type="checkbox" />
+                <small>Crime</small>
+              </div>
+              <div class="category">
+                <input type="checkbox" />
+                <small>Sci-fi</small>
+              </div>
+              <div class="category">
+                <input type="checkbox" />
+                <small>Documentry</small>
+              </div>
+              <div class="category">
+                <input type="checkbox" />
+                <small>Sport</small>
+              </div>
+            </div>
+          </div>
+          <div class="range-slider dropdown">
+            <div class="opt-title">
+              <h4>Price Range</h4>
+            </div>
+            <div class="option">
+              <div class="price-input">
+                <div class="field">
+                  <span>Min</span>
+                  <input type="number" class="input-min" value="2500">
+                </div>
+                <div class="separator">-</div>
+                <div class="field">
+                  <span>Max</span>
+                  <input type="number" class="input-max" value="7500">
+                </div>
+              </div>
+              <div class="slider">
+                <div class="progress"></div>
+              </div>
+              <div class="range-input">
+                <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
+                <input type="range" class="range-max" min="0" max="10000" value="7500" step="100">
+              </div>
+            </div>
+          </div>
+          <div class="footer-btn">
+            <button>Refine Search</button>
+            <button>Reset Filter</button>
+          </div>
+          </div>
+        
+        </div>
+        <div class="book-collections">
+          <h4>Books</h4>
+          
+          
+
+       <center>   <div class="genre-buttons">
+            <button class="genre-filter" data-genre="all">All</button>
+            <button class="genre-filter" data-genre="fiction">Fiction</button>
+            <button class="genre-filter" data-genre="non-fiction">Non-Fiction</button>
+            <button class="genre-filter" data-genre="mystery">Mystery</button>
+            <button class="genre-filter" data-genre="adventure">Adventure</button>
+            <button class="genre-filter" data-genre="kids">Kids</button>
+            <button class="genre-filter" data-genre="romance">Romance</button>
+            <button class="genre-filter" data-genre="fantasy">Fantasy</button>
+            <button class="genre-filter" data-genre="science-fiction">Science-Fiction</button>
+            
+          </div></center>
+          
+          <div class="books">
+            
+            <div class="book-card" data-genre="non-fiction">
+              <div class="img">
+                <a href="booksdetaileinstein.html"><img src="../images/einstein.jpg" alt="" /></a>              </div>
+              <h5>The Universe and Dr. Einstein</h5>
+              <h6>Author: Lincoln Barnett</h6>
+              <small><a href="">Non-Fiction</a></small>
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            
+            <div class="book-card" data-genre="non-fiction">
+              <div class="img">
+                <a href="booksdetail-martians.html"><img src="../images/martians.jpg" alt="" /></a>
+               
+              </div>
+              <h5>Martians of Science</h5>
+              <h6>Author: Istvan Hargittai</h6>
+              <small
+                ><a href="">Non-Fiction</a><a href=""></a
+                ><a href=""></a></small
+              >
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <div class="book-card" data-genre="mystery">
+              <div class="img">
+                <a href="booksdetail-the24thhour.html"><img src="../images/the24thhour.jpg" alt="" /></a>
+               
+              </div>
+              <h5>The 24th Hour</h5>
+              <h6>Author: James Patterson and...</h6>
+              <small
+                ><a href="">Mystery</a><a href=""></a
+                ><a href=""></a></small
+              >
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <div class="book-card" data-genre="mystery">
+              <div class="img">
+                <a href="booksdetail-thehunger.html"><img src="../images/hunger.jpg" alt="" /></a>
+               
+              </div>
+              <h5>The Hunger Games</h5>
+              <h6>Author: Suzanne Collins...</h6>
+              <small
+                ><a href="">Mystery</a><a href=""></a
+                ><a href=""></a></small
+              >
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <div class="book-card" data-genre="fiction">
+              <div class="img">
+                <a href="booksdetail-myfourthofjuly.html"><img src="../images/myfourthofjuly.jpg" alt="" /></a>
+                
+              </div>
+              <h5>My Fourth of July</h5>
+              <h6>Author: Larry Day</h6>
+              <small
+                ><a href="">Fiction</a><a href=""></a
+                ><a href=""></a></small
+              >
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <div class="book-card" data-genre="kids">
+              <div class="img">
+                <a href="booksdetail-chickachickaboomboom.html"><img src="../images/chickachickaboom.jpg" alt="" /></a>
+                
+              </div>
+              <h5>Chicka Chicka Boom Boom</h5>
+              <h6>Author: Bill Martin Jr and...</h6>
+              <small
+                ><a href="">Kids</a><a href=""></a
+                ><a href=""></a></small
+              >
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <div class="book-card" data-genre="kids">
+              <div class="img">
+                <a href="booksdetail-captainunderpants.html"><img src="../images/captainunderpants.jpg" alt="" /></a>
+                
+              </div>
+              <h5>Captain Underpants</h5>
+              <h6>Author: Dav Pilkey</h6>
+              <small
+                ><a href="">Kids</a><a href=""></a
+                ><a href=""></a></small
+              >
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <div class="book-card" data-genre="fantasy">
+              <div class="img">
+                <a href="booksdetail-theatlassix.html"><img src="../images/atlas.jpg" alt="" /></a>
+                
+              </div>
+              <h5>The Atlas Six</h5>
+              <h6>Author: Olivie Blake</h6>
+              <small
+                ><a href="">Fantasy</a><a href=""></a
+                ><a href=""></a></small
+              >
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <div class="book-card" data-genre="romance">
+              <div class="img">
+                <a href="booksdetail-asweetstingofsalt.html"><img src="../images/romance1.jpg" alt="" /></a>
+                
+              </div>
+              <h5>A Sweet Sting of Salt</h5>
+              <h6>Author: Rose Sutherland</h6>
+              <small
+                ><a href="">Romance</a><a href=""></a
+                ><a href=""></a></small
+              >
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <div class="book-card" data-genre="adventure">
+              <div class="img">
+                <a href="booksdetail-thetalesofthethames.html"><img src="../images/tales.jpg" alt="" /></a>
+               
+              </div>
+              <h5>The Tales of the Thames</h5>
+              <h6>Author: Max Pemberton</h6>
+              <small
+                ><a href="">Adventure</a><a href=""></a
+                ><a href=""></a></small
+              >
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <div class="book-card" data-genre="science-fiction">
+              <div class="img">
+                <a href="booksdetail-deadstar.html"><img src="../images/deadstar.jpg" alt="" /></a>
+              
+              </div>
+              <h5>Dead Star</h5>
+              <h6>Author: Simon Kewin</h6>
+              <small
+                ><a href="">Science-Fiction</a><a href=""></a
+                ><a href=""></a></small
+              >
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <div class="book-card" data-genre="fantasy">
+              <div class="img">
+                <a href="booksdetail-realmofruins.html"><img src="../images/realm.jpg" alt="" /></a>
+                
+              </div>
+              <h5>Realm of Ruins</h5>
+              <h6>Author: Hannah West</h6>
+              <small
+                ><a href="">Fantasy</a><a href=""></a
+                ><a href=""></a></small
+              >
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+          </div>
+          
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="book-sale">
+      <div class="heading">
+        <h4>Books On Sale</h4>
+        <div class="arrowbtn">
+          <i id="left" class="fa-solid fa-angle-left"></i>
+          <i id="right" class="fa-solid fa-angle-right"></i>
+        </div>
+      </div>
+      <div class="book-container">
+        <div class="wrapper">
+          <ul class="carousel">
+            <li class="card">
+              <div class="img">
+                <a href="booksdetaileinstein.html"><img src="../images/einstein.jpg" alt="" /></a>
+              </div>
+              <h5>The Universe and...</h5>
+              <div class="genre">
+                <span>Non-Fiction</span>
+              </div>
+              <div class="footer">
+                <span class="star"><i class="fa fa-star"></i> 4.8</span>
+                <div class="price">
+                  <span>₱ 426.20</span>
+                  <span><strike>₱ 596.20</strike></span>
+                </div>
+              </div>
+            </li>
+            <li class="card" >
+              <div class="img">
+                <a href="booksdetail-martians.html"><img src="../images/martians.jpg" alt="" /></a>
+              </div>
+              <h5>Martians of...</h5>
+              <div class="genre">
+                <span>Non-Fiction</span>
+              </div>
+              <div class="footer">
+                <span class="star"><i class="fa fa-star"></i> 4.7</span>
+                <div class="price">
+                  <span>₱ 321.2</span>
+                  <span><strike>₱ 458.2</strike></span>
+                </div>
+              </div>
+            </li>
+            <li class="card">
+              <div class="img">
+                <a href="booksdetail-deadstar.html"><img src="../images/deadstar.jpg" alt="" /></a>
+              </div>
+              <h5>Dead Star</h5>
+              <div class="genre">
+                <span>Science Fiction</span>
+              </div>
+              <div class="footer">
+                <span class="star"><i class="fa fa-star"></i> 4.6</span>
+                <div class="price">
+                  <span>₱ 426.2</span>
+                  <span><strike>₱ 558.6</strike></span>
+                </div>
+              </div>
+            </li>
+            <li class="card">
+              <div class="img">
+                <a href="booksdetail-thehunger.html"><img src="../images/hunger.jpg" alt="" /></a>
+              </div>
+              <h5>The Hunger Games</h5>
+              <div class="genre">
+                <span>Mystery</span>
+              </div>
+              <div class="footer">
+                <span class="star"><i class="fa fa-star"></i> 4.6</span>
+                <div class="price">
+                  <span>₱ 415.5</span>
+                  <span><strike>₱ 515.5</strike></span>
+                </div>
+              </div>
+            </li>
+            <li class="card">
+              <div class="img">
+                <a href="booksdetail-thetalesofthethames.html"><img src="../images/tales.jpg" alt="" /></a>
+              </div>
+              <h5>The Tales of...</h5>
+              <div class="genre">
+                <span>Adventure</span>
+              </div>
+              <div class="footer">
+                <span class="star"><i class="fa fa-star"></i> 4.7</span>
+                <div class="price">
+                  <span>₱ 465.2</span>
+                  <span><strike>₱ 625.2</strike></span>
+                </div>
+              </div>
+            </li>
+            <li class="card">
+              <div class="img">
+                <a href="booksdetail-realmofruins.html"><img src="../images/realm.jpg" alt="" /></a>
+              </div>
+              <h5>Realm of Ruins</h5>
+              <div class="genre">
+                <span>Fantasy</span>
+              </div>
+              <div class="footer">
+                <span class="star"><i class="fa fa-star"></i> 4.8</span>
+                <div class="price">
+                  <span>₱ 476.6</span>
+                  <span><strike>₱ 746.6</strike></span>
+                </div>
+              </div>
+            </li>
+            <li class="card">
+              <div class="img">
+                <a href="booksdetail-the24thhour.html"><img src="../images/the24thhour.jpg" alt="" /></a>
+              </div>
+              <h5>Game of...</h5>
+              <div class="genre">
+                <span>Mystery</span>
+              </div>
+              <div class="footer">
+                <span class="star"><i class="fa fa-star"></i> 4.7</span>
+                <div class="price">
+                  <span>₱ 432.5</span>
+                  <span><strike>₱ 650.5</strike></span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <footer>
+      <div class="container">
+        <div class="logo-description">
+         
+          
+          
+        </div>
+       
+       
+      </div>
+    </footer>
+    <button class="back-to-top"><i class="fa-solid fa-chevron-up"></i></button>
+
+    <script>
+      let filterdiv = document.querySelector(".filter-option");
+      let iconbtn = document.querySelector(".rightbtn");
+
+      iconbtn.addEventListener("click", () => {
+        filterdiv.classList.toggle("active-div");
+        iconbtn.classList.toggle("active-btn");
+      })
+
+
+
+
+
+      let editorpick = document.getElementsByClassName("select-box");
+      let icon = document.querySelectorAll(".select-box .opt-title i");
+      let answer = document.querySelectorAll(".select-box .option");
+      for (let i = 0; i < editorpick.length; i++) {
+        editorpick[i].addEventListener("click", () => {
+          if (icon[i].classList.contains("active")) {
+            icon[i].classList.remove("active");
+            answer[i].style.maxHeight = null;
+            answer[i].style.marginTop = "0rem";
+            answer[i].style.padding = "0px";
+          } else {
+            icon[i].classList.add("active");
+            answer[i].style.maxHeight = answer[i].scrollHeight + "px";
+            answer[i].style.padding = "0px 20px 20px 20px";
+          }
+        });
+      }
+
+      let selectdate = document.querySelector(".select-date .opt-title");
+      let downarrow = document.querySelector(".select-date .opt-title i");
+      let option = document.querySelector(".select-date .option");
+      selectdate.addEventListener("click",() => {
+        if(downarrow.classList.contains("active")){
+          downarrow.classList.remove("active");
+          option.style.display = "none";
+          option.style.padding = "0px";
+        }else{
+          downarrow.classList.add("active");
+          option.style.display = "block";
+          option.style.maxHeight = option.scrollHeight+"px";
+          option.style.padding = "0px 20px 20px 20px";
+        }
+      })
+
+      let likebtn = document.getElementsByClassName("like");
+      for (let i = 0; i < likebtn.length; i++) {
+        likebtn[i].addEventListener("click", () => {
+          likebtn[i].classList.toggle("liked");
+        });
+      }
+
+      const rangeInput = document.querySelectorAll(".range-input input"),
+priceInput = document.querySelectorAll(".price-input input"),
+range = document.querySelector(".slider .progress");
+let priceGap = 1000;
+
+priceInput.forEach(input =>{
+    input.addEventListener("input", e =>{
+        let minPrice = parseInt(priceInput[0].value),
+        maxPrice = parseInt(priceInput[1].value);
+        
+        if((maxPrice - minPrice >= priceGap) && maxPrice <= rangeInput[1].max){
+            if(e.target.className === "input-min"){
+                rangeInput[0].value = minPrice;
+                range.style.left = ((minPrice / rangeInput[0].max) * 100) + "%";
+            }else{
+                rangeInput[1].value = maxPrice;
+                range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
+            }
+        }
+    });
+});
+
+rangeInput.forEach(input =>{
+    input.addEventListener("input", e =>{
+        let minVal = parseInt(rangeInput[0].value),
+        maxVal = parseInt(rangeInput[1].value);
+
+        if((maxVal - minVal) < priceGap){
+            if(e.target.className === "range-min"){
+                rangeInput[0].value = maxVal - priceGap
+            }else{
+                rangeInput[1].value = minVal + priceGap;
+            }
+        }else{
+            priceInput[0].value = minVal;
+            priceInput[1].value = maxVal;
+            range.style.left = ((minVal / rangeInput[0].max) * 100) + "%";
+            range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+        }
+    });
+});
+
+
+
+    </script>
+    <script src="../js/repeat-js.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+    const genreButtons = document.querySelectorAll(".genre-filter");
+    const bookCards = document.querySelectorAll(".book-card");
+
+    genreButtons.forEach(button => {
+        button.addEventListener("click", function() {
+            const genre = button.dataset.genre;
+            bookCards.forEach(card => {
+                const cardGenre = card.dataset.genre;
+                if (genre === "all" || cardGenre === genre) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+    });
+});
+
+
+document.getElementById("search-button").addEventListener("click", function() {
+    const searchTerm = document.getElementById("search-input").value.toLowerCase();
+    const bookCards = document.querySelectorAll(".book-card"); // Change the class to match the HTML
+
+    bookCards.forEach(card => {
+        const title = card.querySelector("h5").textContent.toLowerCase(); // Adjusted to find the title within each card
+        const author = card.querySelector("h6").textContent.toLowerCase(); // Adjusted to find the author within each card
+
+        if (title.includes(searchTerm) || author.includes(searchTerm)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+});
+
+
+      </script>
+     
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../js/back-to-top.js"></script>
+  </body>
+</html>

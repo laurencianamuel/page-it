@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PageIT | Payment</title>
+    <link rel="icon" href="../images/pageit.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="book-filter.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <style>
+        .payment-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .payment-header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color:#ff7300;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 0.5rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .payment-method {
+            margin-bottom: 1rem;
+        }
+        .payment-method label {
+            margin-left: 0.5rem;
+        }
+        .total-amount {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .payment-button {
+            display: block;
+            width: 100%;
+            padding: 0.75rem;
+            font-size: 1rem;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        .payment-button:hover {
+            background-color: #ec9006;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar-2">
+            <div class="logo">
+                <div class="img">
+                    <a href="../index.html"><img src="../images/pageit.png" alt="" /></a>
+                </div>
+                <div class="title">
+                    <h4>PageIT<i class="fa-solid fa-grid"></i></h4>
+                </div>
+            </div>
+            <div class="nav-end">
+                <button class="cart">
+                    <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> </a>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <div class="breadcrumb-container">
+        <ul class="breadcrumb">
+            <li><a href="books.html" style="color: #ec9006">Books</a></li>
+            <li><a href="cart.html" style="color: #ec9006">Cart</a></li>
+            <li><a href="">Payment</a></li>
+        </ul>
+    </div>
+
+    <section class="payment-container">
+        <h2 class="payment-header">Payment Information</h2>
+        <form id="payment-form">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email " required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" placeholder="Enter your address (only in the Philippines)" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="form-group" id="credit-card-fields">
+                <label for="credit-card">Credit Card Number</label>
+                <input type="text" id="credit-card" name="credit-card" placeholder="Enter your credit card number"  required>
+            </div>
+            <div class="form-group" id="expiration-fields">
+                <label for="expiration">Expiration Date</label>
+                <input type="text" id="expiration" name="expiration" placeholder="MM/YY" required>
+            </div>
+            <div class="form-group" id="cvv-fields">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" required>
+            </div>
+            <div class="payment-method">
+                <input type="radio" id="credit-card-method" name="payment-method" value="credit-card" placeholder="credit card" checked>
+                <label for="credit-card-method">Credit Card</label>
+            </div>
+            <div class="payment-method">
+                <input type="radio" id="cod" name="payment-method" value="cod">
+                <label for="cod">Cash on Delivery</label>
+            </div>
+            <div class="total-amount">
+                Total: ₱<span id="total-amount">0.00</span>
+            </div>
+            <button type="submit" class="payment-button">Submit</button>
+        </form>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let totalAmount = 0;
+
+            cart.forEach(book => {
+                totalAmount += book.price * book.quantity;
+            });
+
+            document.getElementById('total-amount').textContent = totalAmount.toFixed(2);
+        });
+
+        const creditCardFields = document.getElementById('credit-card-fields');
+        const expirationFields = document.getElementById('expiration-fields');
+        const cvvFields = document.getElementById('cvv-fields');
+        const paymentButton = document.querySelector('.payment-button');
+
+        document.getElementById('credit-card-method').addEventListener('click', function() {
+            creditCardFields.classList.remove('hidden');
+            expirationFields.classList.remove('hidden');
+            cvvFields.classList.remove('hidden');
+            document.getElementById('credit-card').required = true;
+            document.getElementById('expiration').required = true;
+            document.getElementById('cvv').required = true;
+        });
+
+        document.getElementById('cod').addEventListener('click',
+ function() {
+            creditCardFields.classList.add('hidden');
+            expirationFields.classList.add('hidden');
+            cvvFields.classList.add('hidden');
+            document.getElementById('credit-card').required = false;
+            document.getElementById('expiration').required = false;
+            document.getElementById('cvv').required = false;
+        });
+
+        document.getElementById('payment-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const paymentMethod = document.querySelector('input[name="payment-method"]:checked').value;
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const address = document.getElementById('address').value;
+            const phone = document.getElementById('phone').value;
+
+            if (paymentMethod === 'credit-card') {
+                const creditCardNumber = document.getElementById('credit-card').value;
+                const expirationDate = document.getElementById('expiration').value;
+                const cvv = document.getElementById('cvv').value;
+                alert(`Payment successful using Credit Card.\nName: ${name}\nEmail: ${email}\nAddress: ${address}\nPhone Number: ${phone}\nCredit Card Number: ${creditCardNumber}\nExpiration Date: ${expirationDate}\nCVV: ${cvv}`);
+            } else if (paymentMethod === 'cod') {
+                alert(`Payment successful using Cash on Delivery.\nName: ${name}\nEmail: ${email}\nAddress: ${address}\nPhone Number: ${phone}`);
+            }
+            
+            localStorage.removeItem('cart'); // Clear the cart after successful payment
+            window.location.href = 'books.html'; // Redirect to books page or any other page
+        });
+    </script>
+
+    
+</body>
+</html>

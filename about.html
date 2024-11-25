@@ -1,0 +1,518 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PageIT | About Us</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="icon" href="images/pageit.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css" />
+
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+    header {
+      background-color: #333;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      
+ 
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo .img img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+    .title h4 {
+      margin: 0;
+    }
+    .nav-list {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      
+    }
+    .nav-list li {
+      display: inline;
+      
+    }
+    .nav-list a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      
+    }
+    .login a {
+      color: white;
+      text-decoration: none;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    .about-section {
+      margin-top: 50px;
+      text-align: center;
+    }
+    .member {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .member-info {
+      margin-left: 20px;
+    }
+    .member-info h3 {
+      margin-top: 0;
+    }
+    .member-info p {
+      margin-bottom: 10px;
+    }
+
+@media screen and (max-width: 768px) {
+  .member {
+    flex-direction: column;
+    align-items: center;
+  }
+  .member-info {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+.about-section {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.member {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.member-img img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.member-info {
+  margin-left: 20px;
+  text-align: left;
+}
+
+.member-info h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.member-info p {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.container {
+  max-width: 100%;
+  margin: 20px;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .member {
+    flex-direction: column;
+    align-items: center;
+  }
+  .member-info {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+.about-section {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.member {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.member-img img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ff7300;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.member-info {
+  margin-left: 20px;
+  text-align: left;
+}
+
+.member-info h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.member-info p {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.container {
+  max-width: 100%;
+  margin: 20px;
+  padding: 0 20px;
+}
+@media screen and (max-width: 768px) {
+  .member {
+    flex-direction: column;
+    align-items: center;
+  }
+  .member-info {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+.about-section {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.member {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.member-img img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.member-img img:hover {
+  transform: scale(1.1);
+}
+
+.member-info {
+  margin-left: 20px;
+  text-align: left;
+}
+
+.member-info h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.member-info p {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.container {
+  max-width: 100%;
+  margin: 20px;
+  padding: 0 20px;
+}
+
+h2 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.nav-list a:hover {
+  color: #FF5733;
+  
+}
+
+.login a:hover {
+  color: #FF5733;
+}
+
+body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+
+    header {
+      background-color: #333;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .nav-list a {
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 100%;
+      margin: 20px;
+      padding: 0 20px;
+    }
+
+    .about-section {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    .member {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .member:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .member-img img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #333;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .member-img img:hover {
+      transform: scale(1.1);
+    }
+
+    .member-info {
+      margin-left: 20px;
+      text-align: left;
+    }
+
+    .member-info h3 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    .member-info p {
+      margin-bottom: 10px;
+      color: #666;
+    }
+
+    h2 {
+      font-size: 32px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    .nav-list a:hover {
+      color: #FF5733;
+    }
+
+    .login a:hover {
+      color: #FF5733;
+    }
+
+    @media screen and (max-width: 768px) {
+      .member {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .member-info {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .container {
+        padding: 0 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header >
+    <nav class="navbar">
+      <div class="logo">
+        <div class="img">
+          <img src="images/pageit.png" alt="" />
+        </div>
+        <div class="logo-header">
+          <h4><a href="index.html">PageIt</a></h4>
+          
+        </div>
+      </div>
+      <ul class="nav-list">
+        <div class="logo">
+          <div class="title">
+            <div class="img">
+              <img src="images/pageit.png" alt="" />
+            </div>
+            <div class="logo-header">
+              <h4><a href="index.html">PageIT</a></h4>
+              
+            </div>
+          </div>
+          <button class="close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Pages/books.html">Books</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
+        <li><a href="pages/cart.html">Cart</a></li>
+        <li><a href="about.html">About Us</a></li>
+
+
+        <script>
+        function confirmSignOut() {
+            var confirmation = confirm("Are you sure you want to logout?");
+            if (confirmation) {
+                window.location.href = "index.html";
+            } else {
+            }
+        }
+        </script>
+        
+        
+      </ul>
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section class="about-section">
+      <h2>About Us</h2>
+      <p>Welcome to PageIT Bookstore, where we bring your reading pleasures to life! PageIT was founded with a mission to provide readers with a curated selection of books, catering to diverse tastes and interests. Our team is dedicated to fostering a love for reading and making literary discoveries accessible to everyone. At PageIT, we believe in the transformative power of books. Whether you're seeking knowledge, entertainment, or inspiration, our collection spans genres and formats to meet your needs. Our founders, Lhemuel P. Laurenciana, Alberto T. Villaruel, and Maenard P. Salinas, share a vision of building a community around reading. With their combined expertise in technology, business, and customer service, PageIT strives to deliver exceptional experiences to book lovers worldwide.</p>
+      <div class="member">
+        <div class="member-img">
+          <img src="./images/lhem.jpg" alt="Person 1" style="width: 150px; border-radius: 50%;">
+        </div>
+        <div class="member-info">
+          <h3>Lhemuel P. Laurenciana</h3>
+          <p>Web Developer</p>
+          <p>Lhemuel is passionate about creating innovative solutions that make a difference in people's lives.</p>
+        </div>
+      </div>
+      <div class="member">
+        <div class="member-img">
+          <img src="./images/albert.jpg" alt="Person 2" style="width: 150px; border-radius: 50%;">
+        </div>
+        <div class="member-info">
+          <h3>Alberto T. Villaruel</h3>
+          <p>UI Designer</p>
+          <p>Albert loves exploring new technologies and turning them into practical solutions.</p>
+        </div>
+      </div>
+      <div class="member">
+        <div class="member-img">
+          <img src="./images/maenard.jpg" alt="Person 3" style="width: 150px; border-radius: 50%;">
+        </div>
+        <div class="member-info">
+          <h3>Maenard P. Salinas</h3>
+          <p>UX Designer</p>
+          <p>Maenard ensures smooth operations and focuses on delivering exceptional customer experiences.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="js/back-to-top.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/repeat-js.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+  <script></script>
+</body>
+</html>
